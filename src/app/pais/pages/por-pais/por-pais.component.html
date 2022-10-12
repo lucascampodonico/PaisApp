@@ -13,7 +13,7 @@
   </div>
 </div>
 <hr />
-<div class="alert alert-danger">No se encontró</div>
+<div *ngIf="hayError" class="alert alert-danger">No se encontró {{termino.value}}</div>
 
 <div class="row">
   <div class="col">
