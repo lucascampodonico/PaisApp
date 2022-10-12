@@ -20,19 +20,19 @@
     <table class="table table-hover">
       <thead>
         <tr>
-          <th>A</th>
-          <th>B</th>
+          <th>#</th>
+          <th>Flag</th>
           <th>C</th>
           <th>D</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-          <td><span class="badge badge-primary">VER</span></td>
+        <tr *ngFor="let pais of paises; let i = index">
+          <td>{{i+1}}</td>
+          <td><img [src]="pais.flag" alt="" style="width:50px"></td>
+          <td>{{pais.name}}</td>
+          <td>{{pais.population | number}}</td>
+          <td><button [routerlink]="['/pais', pais.alpha2Code]" class="btn btn-primary">VER</button></td>
         </tr>
       </tbody>
     </table>

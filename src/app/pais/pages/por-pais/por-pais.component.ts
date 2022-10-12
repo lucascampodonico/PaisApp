@@ -9,7 +9,7 @@ import { Country } from '../interfaces/pais.interface';
 })
 export class PorPaisComponent implements OnInit {
   hayError: boolean = false;
-  paises: any[] = [];
+  paises: Country[] = [];
   constructor(private paisService: PaisService) {}
 
   ngOnInit() {}
