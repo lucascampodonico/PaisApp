@@ -7,6 +7,8 @@
       type="text"
       class="form-control"
       name="termino"
+      #termino
+      (keyup.enter)="buscar(termino.value)"
     />
   </div>
 </div>
@@ -30,7 +32,7 @@
           <td>2</td>
           <td>3</td>
           <td>4</td>
-          <td><span class="badge badge-pill badge-success">VER</span></td>
+          <td><span class="badge badge-primary">VER</span></td>
         </tr>
       </tbody>
     </table>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-por-pais',
@@ -10,6 +10,11 @@ export class PorPaisComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  buscar(termino:any){
+    console.log(termino)
+    
   }
 
 }
