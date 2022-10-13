@@ -17,8 +17,13 @@ export class PorPaisComponent implements OnInit {
   buscar(termino: string) {
     this.hayError = false;
     this.paisService.buscarPais(termino).subscribe(
-      (paises) =>{ this.paises = paises},
-      (e) => (this.hayError = true)
+      (paises) => {
+        this.paises = paises;
+      },
+      (e) => {
+        this.hayError = true;
+        this.paises = [];
+      }
     );
   }
 }
