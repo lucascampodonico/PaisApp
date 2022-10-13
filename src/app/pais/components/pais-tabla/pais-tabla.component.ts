@@ -7,7 +7,7 @@ import { Country } from '../../pages/interfaces/pais.interface';
   styleUrls: ['./pais-tabla.component.css'],
 })
 export class PaisTablaComponent {
-  @Input() paises: Country[];
+  @Input() paises: Country[] = [];
 
   constructor() {}
 

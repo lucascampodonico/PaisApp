@@ -2,16 +2,17 @@
 <hr />
 <div class="row">
   <div class="col">
-   <app-pais-input (onEnter)="buscar( $event )"></app-pais-input>
+    <app-pais-input
+      (onEnter)="buscar($event)"
+      (onDebounce)="sugerencias($event)"
+    ></app-pais-input>
   </div>
 </div>
 <hr />
-<div *ngIf="hayError" class="alert alert-danger">
-  No se encontró
-</div>
+<div *ngIf="hayError" class="alert alert-danger">No se encontró</div>
 
 <div class="row" *ngIf="paises.length > 0">
   <div class="col">
-   <app-pais-tabla [paises]="paises"></app-pais-tabla>
+    <app-pais-tabla [paises]="paises"></app-pais-tabla>
   </div>
 </div>
